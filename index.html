@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokedex</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
+    <link href="style.css" rel="stylesheet" />
+</head>
+<body>
+    <header class="header">
+        <img src="pokedex.png" alt="logo pokémon">
+    <form action="" onsubmit="searchPokemon(event)">
+        <input type="text" name="pokemon" autocomplete="off" placeholder="Buscar Pokémon">
+    </form>
+    <div data-poke-card class="poke-card">
+        <div data-poke-name></div>
+        <div data-poke-img-container class="img-container">
+            <img data-poke-img class="poke-img" src="./poke-shadow.png"/>
+        </div>
+        <div data-poke-id></div>
+        <div data-poke-types class="poke-types"></div>
+    </div>
+
+    <!-- Modal -->
+    <div id="modal" class="modal">
+    <div class="modal-content">
+        <span class="close" id="closeBtn">&times;</span>
+        <h2 data-poke-name></h2>
+        <div data-poke-img-container class="img-container">
+            <img data-poke-img class="poke-img" src="./poke-shadow.png"/>
+        </div>
+        <div data-poke-id></div>
+        <div data-poke-types class="poke-types"></div>
+    </div>
+</div>
+
+    <!-- Botón para abrir el modal -->
+    <button id="openModalBtn" style="display: none;">Open Modal</button>
+
+    <script src="js.js" type="text/javascript" defer></script>
+</body>
+</html>
